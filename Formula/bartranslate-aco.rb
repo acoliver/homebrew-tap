@@ -7,7 +7,8 @@ class BartranslateAco < Formula
   license "GPL-3.0-only"
 
   def install
-    prefix.install "BarTranslateACO.app"
+    app_bundle = buildpath.basename.to_s == "BarTranslateACO.app" ? buildpath : buildpath/"BarTranslateACO.app"
+    prefix.install app_bundle => "BarTranslateACO.app"
     bin.install_symlink prefix/"BarTranslateACO.app/Contents/MacOS/BarTranslateACO" => "bartranslate-aco"
   end
 
@@ -27,6 +28,8 @@ class BartranslateAco < Formula
   end
 
   test do
+    assert_predicate prefix/"BarTranslateACO.app", :exist?
+    assert_predicate prefix/"BarTranslateACO.app/Contents/Info.plist", :exist?
     assert_predicate prefix/"BarTranslateACO.app/Contents/MacOS/BarTranslateACO", :exist?
     assert_predicate bin/"bartranslate-aco", :exist?
   end
