@@ -1,9 +1,9 @@
 class PersonalAgent < Formula
   desc "PersonalAgent macOS menu bar assistant"
   homepage "https://github.com/acoliver/personal-agent"
-  url "https://github.com/acoliver/personal-agent/releases/download/v0.3.3/personal-agent-v0.3.3-aarch64-apple-darwin.tar.gz"
-  version "0.3.3"
-  sha256 "6cf7276902070738bc8c38e82dc4171b9f76a89cf8e6afba07f97fc4089c530b"
+  url "https://github.com/acoliver/personal-agent/releases/download/v0.3.4/personal-agent-v0.3.4-aarch64-apple-darwin.tar.gz"
+  version "0.3.4"
+  sha256 "a2535c55a4148389b0302640fc858fa7492afd99e3eb20f9d3b7d148b0e0e853"
   license "MIT"
 
   def install
