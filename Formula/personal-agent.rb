@@ -6,14 +6,13 @@ class PersonalAgent < Formula
   sha256 "1c54f25c488f9b9aa2d7bdb382d5b5ba0c93c6c340413e6d86965d843e48c08b"
   license "MIT"
 
-  # The release tarball ships a PersonalAgent.app bundle (Issue #177):
-  # - Info.plist has LSUIElement=true so no Dock icon / Cmd-Tab tile.
-  # - SMAppService (launch-at-login) requires a real .app bundle identity.
-  # We drop the bundle into the Homebrew prefix and link the inner binary
-  # onto PATH so existing `personal-agent` invocations keep working.
+  # The release tarball is a PersonalAgent.app bundle (Issue #177).
+  # Homebrew strips the archive's single top-level directory while staging,
+  # so the formula rebuilds that bundle directory before installation.
   def install
-    prefix.install "PersonalAgent.app"
-    bin.install_symlink prefix/"PersonalAgent.app/Contents/MacOS/PersonalAgent" => "personal-agent"
+    app = prefix/"PersonalAgent.app"
+    app.install "Contents"
+    bin.install_symlink app/"Contents/MacOS/PersonalAgent" => "personal-agent"
   end
 
   def caveats
