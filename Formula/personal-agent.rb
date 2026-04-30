@@ -1,9 +1,9 @@
 class PersonalAgent < Formula
   desc "PersonalAgent macOS menu bar assistant"
   homepage "https://github.com/acoliver/personal-agent"
-  url "https://github.com/acoliver/personal-agent/releases/download/v0.3.5/personal-agent-v0.3.5-aarch64-apple-darwin.tar.gz"
-  version "0.3.5"
-  sha256 "1c54f25c488f9b9aa2d7bdb382d5b5ba0c93c6c340413e6d86965d843e48c08b"
+  url "https://github.com/acoliver/personal-agent/releases/download/v0.3.6/personal-agent-v0.3.6-aarch64-apple-darwin.tar.gz"
+  version "0.3.6"
+  sha256 "2de122f78154488d7ff82ed1e52caabfa4ebf1e9090066bccb3178545a0c0fbe"
   license "MIT"
 
   # The release tarball is a PersonalAgent.app bundle (Issue #177).
