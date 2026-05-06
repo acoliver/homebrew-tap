@@ -1,9 +1,9 @@
 class BartranslateAco < Formula
   desc "macOS menu bar translation app (ACO fork)"
   homepage "https://github.com/acoliver/BarTranslate"
-  url "https://github.com/acoliver/BarTranslate/releases/download/v2.2.4/bartranslate-aco-v2.2.4-universal-apple-darwin.zip", using: :nounzip
-  version "2.2.4"
-  sha256 "143ce4abf47e964b3a417e5ceb73a4a9df19fc79bec3b5fe9e235b365dd43165"
+  url "https://github.com/acoliver/BarTranslate/releases/download/v2.2.5/bartranslate-aco-v2.2.5-universal-apple-darwin.zip", using: :nounzip
+  version "2.2.5"
+  sha256 "8c6bef8b863b5461df3e50f3a702bf655c6da4195555fcb224ca2352cb7c997b"
   license "GPL-3.0-only"
 
   def install
